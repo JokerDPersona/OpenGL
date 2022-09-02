@@ -3,15 +3,15 @@
 
 # compile C with /usr/bin/clang
 # compile CXX with /usr/bin/clang++
-C_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk  
+C_FLAGS = -g  
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/lizhenxiong/OpenGL/./include -I/usr/local/include 
+C_INCLUDES = -I/usr/local/Cellar/glew/2.2.0_1/include/GL -I/usr/local/Cellar/glfw/3.3.4/include/GLFW -I/usr/local/include/glad -I/usr/local/include/KHR -I/Users/lizhenxiong/OpenGL/./include -I/usr/local/include -I/Users/lizhenxiong/OpenGL/./MathLibrary -I/Users/lizhenxiong/OpenGL/./FirstTriangle 
 
-CXX_FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk   -std=gnu++14
+CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/lizhenxiong/OpenGL/./include -I/usr/local/include 
+CXX_INCLUDES = -I/usr/local/Cellar/glew/2.2.0_1/include/GL -I/usr/local/Cellar/glfw/3.3.4/include/GLFW -I/usr/local/include/glad -I/usr/local/include/KHR -I/Users/lizhenxiong/OpenGL/./include -I/usr/local/include -I/Users/lizhenxiong/OpenGL/./MathLibrary -I/Users/lizhenxiong/OpenGL/./FirstTriangle 
 

@@ -114,6 +114,8 @@ OpenGL_EXTERNAL_OBJECTS =
 OpenGL: CMakeFiles/OpenGL.dir/glad.c.o
 OpenGL: CMakeFiles/OpenGL.dir/main.cpp.o
 OpenGL: CMakeFiles/OpenGL.dir/build.make
+OpenGL: /usr/local/Cellar/glew/2.2.0_1/lib/libGLEW.2.2.0.dylib
+OpenGL: /usr/local/Cellar/glfw/3.3.4/lib/libglfw.3.3.dylib
 OpenGL: CMakeFiles/OpenGL.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/lizhenxiong/OpenGL/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable OpenGL"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGL.dir/link.txt --verbose=$(VERBOSE)
