@@ -6,8 +6,7 @@ CMakeFiles/OpenGL.dir/glad.c.o: ../include/glad/glad.h
 CMakeFiles/OpenGL.dir/glad.c.o: ../glad.c
 
 CMakeFiles/OpenGL.dir/main.cpp.o: ../main.cpp
-CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/Cellar/glew/2.2.0_1/include/GL/glew.h
-CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/Cellar/glfw/3.3.4/include/GLFW/glfw3.h
+CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/include/GLFW/glfw3.h
 CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/include/X11/X.h
 CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/include/X11/Xfuncproto.h
 CMakeFiles/OpenGL.dir/main.cpp.o: /usr/local/include/X11/Xlib.h

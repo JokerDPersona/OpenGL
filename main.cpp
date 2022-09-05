@@ -1,56 +1,52 @@
-#include <glew.h>
-#include <glfw3.h>
-#include <iostream>
+#include <GLFW/glfw3.h>
 
-using namespace std;
+int main(void)
+{
+    GLFWwindow* window;
 
-void key_callback(GLFWwindow *window, int key, int scancode, int action, int mode) {
-    //如果按下ESC，把windowShouldClose设置为True，外面的循环会关闭应用
-    if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
-        glfwSetWindowShouldClose(window, GL_TRUE);
-    cout << "ESC" << mode;
-}
-
-int main(void) {
-    //初始化GLFW库
+    /* Initialize the library */
     if (!glfwInit())
         return -1;
-    //创建窗口以及上下文
-    GLFWwindow *window = glfwCreateWindow(640, 480, "hello world", NULL, NULL);
-    if (!window) {
-        //创建失败会返回NULL
+
+    /* Create a windowed mode window and its OpenGL context */
+    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+    if (!window)
+    {
         glfwTerminate();
+        return -1;
     }
-    //建立当前窗口的上下文
+
+    /* Make the window's context current */
     glfwMakeContextCurrent(window);
 
-    glfwSetKeyCallback(window, key_callback); //注册回调函数
-    //循环，直到用户关闭窗口
-    while (!glfwWindowShouldClose(window)) {
-        /*******轮询事件*******/
-        glfwPollEvents();
+    /* Loop until the user closes the window */
+    while (!glfwWindowShouldClose(window))
+    {
 
-        /*******渲染*******/
-        //选择清空的颜色RGBA
-        glClearColor(0.2, 0.3, 0.3, 1);
+        glClearColor(0.2,0.3,0.3,1);
+        /* Render here */
         glClear(GL_COLOR_BUFFER_BIT);
 
-        //开始画一个三角形
         glBegin(GL_TRIANGLES);
-        glColor3f(1, 0, 0); //Red
-        glVertex3f(0, 1, 1);
 
-        glColor3f(0, 1, 0); //Green
-        glVertex3f(-1, -1, 0);
+        glColor3f(1,0,0);
+        glVertex3f(0,0.5,0.5);
 
-        glColor3f(0, 0, 1); //Blue
-        glVertex3f(1, -1, 0);
-        //结束一个画图步骤
+        glColor3f(0,1.0,0);
+        glVertex3f(-0.5,-0.5,0);
+
+        glColor3f(0,0,1);
+        glVertex3f(0.5,-0.5,0);
+
         glEnd();
 
-        /******交换缓冲区，更新window上的内容******/
+        /* Swap front and back buffers */
         glfwSwapBuffers(window);
+
+        /* Poll for and process events */
+        glfwPollEvents();
     }
+
     glfwTerminate();
     return 0;
 }
